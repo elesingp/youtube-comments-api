@@ -30,4 +30,5 @@ for item in response['items']:
 
 df = pd.DataFrame(comments, columns=['author', 'published_at', 'updated_at', 'like_count', 'text'])
 
-df.head(10)
+# топ по лайкам на комментариях
+df.sort_values('like_count', ascending=False)
